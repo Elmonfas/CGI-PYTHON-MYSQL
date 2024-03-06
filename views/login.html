@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>LOGIN</title>
+</head>
+<body>
+    <div class="min-h-screen flex">
+    <img src="./beach.svg" alt="" class="w-1/2">
+    <div class="flex justify-end">
+        <div class="bg-white min-h-screen w-full flex justify-center items-center ml-[14em]">
+            <div>
+                <form action="/cgi-bin/login.py" method="post">
+                    <div>
+                        <span class="text-sm text-gray-900">¡Bienvenido de nuevo!</span>
+                        <h1 class="text-2xl font-bold">Accede con tu cuenta</h1>
+                    </div>
+                    <div class="my-3">
+                        <label class="block text-md mb-2" for="email">Email</label>
+                        <input class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" type="email" name="email" placeholder="email" required autofocus>
+    </div>
+                    <div class="mt-5">
+                        <label class="block text-md mb-2" for="password">Password</label>
+                        <input class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" type="password" name="password" placeholder="password" required>
+        </div>
+                            <div class="">
+                                <button type="submit" class="mt-4 mb-3 w-full bg-[#68C8BB] hover:bg-[#31DBC9] text-white py-2 rounded-md transition duration-100">Acceder</button>
+                                <div class="flex  space-x-2 justify-center items-end bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100"">
+
+                                    <a href="/index.html" >Vuelve al incio</a>
+                                </div>
+                            </div>
+                </form>
+                <p class="mt-8"> ¿No tienes cuenta? <a class="cursor-pointer text-sm text-[#31DBC9] hover:underline" href="/register.html"> Registrate ahora</a></p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

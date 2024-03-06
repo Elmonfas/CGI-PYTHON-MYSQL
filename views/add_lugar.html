@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Viajes</title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap"
+    rel="stylesheet" />
+
+<style> 
+    * {
+        font-family: "Poppins", sans-serif;
+    }
+</style>
+
+<main class="flex flex-col items-center justify-center mt-32">
+    <header class="container">
+        <nav
+            class="flex justify-between md:justify-around py-4 bg-white/80 backdrop-blur-md shadow-md w-full px-10 fixed top-0 left-0 right-0 z-10 px-8 md:px-3">
+            <div class="flex items-center">
+                <a class="cursor-pointer">
+                    <h3 class="text-2xl font-medium text-blue-500">
+                        <img
+                            class="h-10 scale-[1.5] ml-[1em]" 
+                            src="https://png.pngtree.com/png-clipart/20230810/original/pngtree-minimalist-mountain-logo-for-outdoor-adventures-and-landscape-design-vector-picture-image_10243625.png"
+                            alt="Store Logo" />
+                    </h3>
+                </a>
+            </div>
+
+            <div
+                class="items-center md:space-x-8 justify-center justify-items-center md:justify-items-center md:flex md:pt-2 w-full left-0 top-16 px-5 md:px-10 py-3 md:py-0 border-t md:border-t-0">
+                <a
+                    class="flex text-gray-600 hover:text-[#FF9E00] cursor-pointer transition-colors duration-300">
+                    Inicio
+                </a>
+
+                <a
+                    class="flex text-gray-600 cursor-pointer transition-colors duration-300 hover:text-[#FF9E00] ">
+                    Viajes
+                </a>
+
+                <a
+                    class="flex text-gray-600 hover:text-[#FF9E00] cursor-pointer transition-colors duration-300">
+                    Precios
+                </a>
+
+                <a
+                    class="flex text-gray-600 hover:text-[#FF9E00] cursor-pointer transition-colors duration-300">
+                    Sobre Nosotros
+                </a>
+            </div>
+
+            <div class="flex items-center space-x-5 hidden md:flex">
+
+                <a
+                    class="flex text-gray-600 hover:text-[#FF9E00] cursor-pointer transition-colors duration-300 font-semibold text-blue-600" href="./index.html">
+                    <svg
+                        class="fill-current h-5 w-5 mr-2 mt-0.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
+                    </svg>
+
+                    Salir
+                </a>
+            </div>
+
+            <button
+                class="w-10 h-10 md:hidden justify-self-end rounded-full hover:bg-gray-100">
+                <svg
+                    class="mx-auto"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24">
+                    <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+        <div class="w-11/12 p-12 sm:w-8/12 md:w-6/12 lg:w-5/12 2xl:w-4/12 
+            px-6 py-10 sm:px-10 sm:py-6 
+            bg-white rounded-lg shadow-md lg:shadow-lg">
+
+            <h2 class="text-center font-semibold text-3xl lg:text-4xl text-gray-800">
+                Añade un Destino
+            </h2>
+
+            <form class="mt-[20%]" method="POST" action="/cgi-bin/add_lugar.py">
+
+                <label for="nombre" class="block text-xs font-semibold text-gray-600 uppercase">Nombre</label>
+                <input id="nombre" type="text" name="nombre" placeholder="Nombre del destino" autofocus
+                    class="block w-full py-3 px-1 mt-2 
+                    text-gray-800 appearance-none 
+                    border-b-2 border-gray-100
+                    focus:text-gray-500 focus:outline-none focus:border-gray-200"
+                    required />
+
+                <label for="nombre" class="block text-xs font-semibold text-gray-600 mt-5 uppercase">IMG</label>
+                <input id="nombre" type="text" name="img" placeholder="IMG del destino"
+                    class="block w-full py-3 px-1 mt-2 
+                    text-gray-800 appearance-none 
+                    border-b-2 border-gray-100
+                    focus:text-gray-500 focus:outline-none focus:border-gray-200"
+                    required />
+
+                <label for="nombre" class="block text-xs font-semibold text-gray-600 mt-5 uppercase">precio</label>
+                <input id="nombre" type="number" name="precio" placeholder="Precio del destino"
+                    class="block w-full py-3 px-1 mt-2 
+                    text-gray-800 appearance-none 
+                    border-b-2 border-gray-100
+                    focus:text-gray-500 focus:outline-none focus:border-gray-200"
+                    required />
+
+                <button type="submit"
+                    class="w-full py-3 mt-10 bg-gray-800 rounded-sm
+                    font-medium text-white uppercase
+                    focus:outline-none hover:bg-gray-700 hover:shadow-none">
+                    ADD
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</main>
+<footer class="bg-gray-800 pt-10 sm:mt-10 pt-10 w-full">
+    <div class="pt-2">
+        <div
+            class="flex pb-5 px-3 m-auto pt-5 border-t border-gray-500 text-gray-400 text-sm flex-col md:flex-row max-w-6xl">
+            <div class="mt-2">© Copyright 1998-year. All Rights Reserved.</div>
+
+        </div>
+    </div>
+</footer>
+</body>
+</html>
